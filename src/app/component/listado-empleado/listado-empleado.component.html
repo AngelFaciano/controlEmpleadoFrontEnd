@@ -1,0 +1,24 @@
+<h2 class="text-center">Lista Empleado</h2>
+
+<table class="table table-striped">
+  <thead class="table-dark">
+    <tr>
+
+      <th scope="col">Nombre y Apellido</th>
+      <th scope="col">Email</th>
+      <th scope="col">Cargo</th>
+      <th scope="col">Borrar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of empleado">
+      <th scope="row">{{emp.nombre}} {{emp.apellido}}</th>
+      <td>{{emp.email}}</td>
+      <td>{{emp.cargo}}</td>
+      <th scope="col"><button class="btn btn-outline-danger"(click)="delete(emp.idEmpleado)"(focus)='onClick()'>X</button></th>
+    </tr>
+  </tbody>
+</table>
+
+
+
